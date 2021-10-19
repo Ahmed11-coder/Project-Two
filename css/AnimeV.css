@@ -1,0 +1,486 @@
+:root {
+    --Main-Color: #006fff;
+    --Black-Main-Color: #222;
+    --Secund-color-big-Screen: #D3E0EA;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Acme', sans-serif;
+}
+.container, .container-l {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* Small Screen */
+@media (min-width: 768px) {
+    .container , .container-l {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container, .container-l {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container, .container-l {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+/* Start Landing */
+.landing {
+    background-image: url(../images/Anime\ Wallpeper16.jpg);
+    background-repeat: no-repeat;
+    height: 80vh;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.landing::before, .landing::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color: #006fff96;
+    transform: skewX(315deg);
+}
+.landing::before {
+    width: 400px;
+    left: 39%;
+}
+.landing::after {
+    width: 200px;
+    left: 85%;
+}
+.landing .Button {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    margin-left: 15px;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+.landing .Button:hover {
+    background-color: rgba(255, 255, 255, 0.541);
+}
+.landing .Button::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 17px;
+    border-style: solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: 0.3s;
+}
+@media (max-width: 767px) {
+    .landing .Button {
+        width: 45px;
+        height: 45px;
+    }
+    .landing .Button::before {
+        border-width: 10px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .landing .Button {
+        width: 60px;
+        height: 60px;
+    }
+    .landing .Button::before {
+        border-width: 14px;
+    }
+}
+.landing .Button.one::before {
+    border-color: transparent transparent transparent var(--Main-Color);
+    transform: translate(-20%, -50%);
+}
+.landing .Button.one:hover::before {
+    transform: translate(10%, -50%);
+}
+.landing .Button.two::before {
+    border-color: transparent var(--Main-Color) transparent transparent;
+    transform: translate(-80%, -50%);
+}
+.landing .Button.two:hover::before {
+    transform: translate(-110%, -50%);
+}
+.landing .Button.one {
+    right: 0px;
+}
+.landing .text {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.landing h2 {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 0px;
+}
+@media (max-width: 767px) {
+    .landing {
+        background-image: url(../images/tango.jpg);
+        background-position: center;
+    }
+    .landing::before {
+        left: 10%;
+        width: 300px;
+    }
+    .landing::after {
+        display: none;
+    }
+    .landing .text {
+        width: 210px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+    .landing {
+        background-image: url(../images/Anime\ Wallpeper3.jpg);
+        background-position: center -160px;
+        height: 85vh;
+    }
+    .landing::before {
+        left: 32.5%;
+    }
+    .landing::after {
+        left: 95%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .landing::before {
+        left: 25%;
+    }
+}
+.landing p {
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+}
+/* End Landing */
+/* Start Anime Cards */
+.container-l {
+    margin-top: 20px;
+}
+.container-l .Sbar {
+    width: 85%;
+    height: 35px;
+    margin-left: 85px;
+    outline:none;
+    border: none;
+    padding: 10px;
+    border-bottom: 2px solid var(--Main-Color);
+    background-color: #006eff17;
+    border-radius: 10px;
+}
+@media (max-width: 767px) {
+    .container-l .Sbar {
+        margin-left: 0;
+    }
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+    .container-l .Sbar {
+        margin-left: 55px;
+    }
+}
+.container-l .Sbutton {
+    width: 45px;
+    background-color: transparent;
+    height: 45px;
+    border-radius: 50%;
+    outline: none;
+    background-image: url(../images/Search2.png);
+    background-size: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: -5px;
+    transition: 0.3s;
+}
+.container-l .Sbutton:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.container-l .Anime-l {
+    display: grid;
+    grid-gap: 45px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 30px;
+    list-style: none;
+    height: fit-content;
+}
+@media (max-width: 767px) {
+    .container-l .Anime-l {
+        grid-template-columns: 1fr;
+        padding-left: 0;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .container-l .Anime-l {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.container-l .Anime-l .anime {
+    background-color: #efeded;
+    margin-top: 50px;
+    counter-increment: count;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    border-radius: 15px;
+    height: 560px;
+    cursor: pointer;
+    color: var(--Black-Main-Color);
+}
+@media (min-width: 992px) and (max-width: 1025px) {
+    .container-l .Anime-l {
+        grid-gap: 27px;
+        padding-left: 0;
+    }
+    .container-l .Anime-l .anime {
+        margin-top: 20px;
+    }
+}
+.container-l .Anime-l .anime::before {
+    content: counter(count, decimal);
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 35px;
+    text-indent: -25px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: rgba(34, 34, 34);
+    position: absolute;
+    box-shadow: -5px -5px 20px rgba(0, 0, 0, 0.2);
+    text-shadow: 0px 0px 20px white;
+    top: 20px;
+    left: -30px;
+}
+@media (max-width: 767px) {
+    .container-l .Anime-l .anime::before {
+        width: 70px;
+        height: 70px;
+        padding: 0;
+        text-indent: 0;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0px -15px 20px rgba(0, 0, 0, 0.4);
+    }
+}
+.container-l .Anime-l .anime .image {
+    height: 425px;
+    border-radius: 15px;
+    position: relative;
+    background-size: cover;
+    transition: 0.5s;
+    z-index: 1;
+}
+.container-l .Anime-l .anime:hover .image {
+    transform: translate(-45px,0);
+    box-shadow: 10px 10px 50px #00000099;
+}
+@media (max-width: 767px) {
+    .container-l .Anime-l .anime:hover .image {
+        transform: translate(-20px, 0);
+        box-shadow: 10px 10px 50px #00000077;
+    }
+}
+@media (min-width: 992px) and (max-width: 1025px) {
+    .container-l .Anime-l .anime:hover .image {
+        transform: translate(-35px, 0);
+    }
+}
+.container-l .Anime-l .anime .text-artical {
+    background-color: #ffffffce;
+    border-radius: 15px;
+    transform: translate(0, -5px);
+}
+.container-l .Anime-l .anime h3 {
+    margin-bottom: 0px;
+    padding-top: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 2px solid black;
+}
+.container-l .Anime-l .anime p {
+    margin-top: 8px;
+    padding-bottom: 5px;
+}
+.anime:nth-child(1) .image {
+    background-image: url(../images/Naruto3.jpg);
+    background-position: center;
+}
+.anime:nth-child(1):hover .image {
+    background-image: url(../images/Naruto4.jpg);
+    background-position: center;
+}
+.anime:nth-child(2) .image {
+    background-image: url(../images/Tokyo\ Ghoul.jpg);
+    background-position-y: -60px;
+}
+.anime:nth-child(2):hover .image {
+    background-image: url(../images/Tokyo\ Ghoul4.jpg);
+    background-position: top;
+}
+.anime:nth-child(3) .image {
+    background-image: url(../images/Hunter\ x\ Hunter3.jpg);
+    background-position-y: center;
+}
+.anime:nth-child(3):hover .image {
+    background-image: url(../images/hunter\ x\ hunter\ \(1\).jpg);
+}
+.anime:nth-child(4) .image {
+    background-image: url(../images/Death\ Note3.jpg);
+    background-position: center;
+}
+.anime:nth-child(4):hover .image {
+    background-image: url(../images/Light\ Wallpeper.jpg);
+}
+.anime:nth-child(5) .image {
+    background-image: url(../images/Attack\ on\ Titan3.jpg);
+    background-position: center;
+}
+.anime:nth-child(5):hover .image {
+    background-image: url(../images/Attack\ on\ Titan4.jpg);
+    background-position: top;
+}
+.anime:nth-child(6) .image {
+    background-image: url(../images/My\ Hero\ Academia.jpg);
+}
+.anime:nth-child(6):hover .image {
+    background-image: url(../images/My\ Hero4.jpg);
+    background-position: center;
+}
+.anime:nth-child(7) .image {
+    background-image: url(../images/Kimetsu\ no\ yaiba.jpg);
+    background-position: center -25px;
+}
+.anime:nth-child(7):hover .image {
+    background-image: url(../images/Tanjiro\ Wallpeper.jpg);
+    background-position: center -150px;
+}
+.anime:nth-child(8) .image {
+    background-image: url(../images/Weathering\ with\ You2.png);
+    background-position: center;
+}
+.anime:nth-child(8):hover .image {
+    background-image: url(../images/Weathering\ with\ You.png);
+}
+.anime:nth-child(9) .image {
+    background-image: url(../images/Jujutsu\ Kaisen2.jpg);
+    background-position: center;
+}
+.anime:nth-child(9):hover .image {
+    background-image: url(../images/Jujutsu\ Kaisen3.png);
+}
+.anime:nth-child(10) .image {
+    background-image: url(../images/Conan.png);
+    background-position: bottom;
+}
+.anime:nth-child(10):hover .image {
+    background-image: url(../images/Conan3.jpg);
+    background-position: center -50px;
+}
+.anime:nth-child(11) .image {
+    background-image: url(../images/Nanatsu\ no\ Taizai2.png);
+    background-position-y: -40px;
+}
+.anime:nth-child(11):hover .image {
+    background-image: url(../images/Nanatsu\ no\ Taizai3.jpg);
+    background-position-y: bottom;
+}
+.anime:nth-child(12) .image {
+    background-image: url(../images/One\ Piece.png);
+}
+.anime:nth-child(12):hover .image {
+    background-image: url(../images/One\ Piece6.jpg);
+    background-position-y: bottom;
+}
+/* End Anime Cards */
+/* Start Numbers */
+.Numbers {
+    display: flex;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+}
+.Numbers::before, .Numbers::after {
+    content: "";
+    cursor: pointer;
+    width: 0px;
+    height: 0px;
+    border-width: 13px;
+    background-color: transparent;
+    position: absolute;
+    transform: translate(5px, 10px);
+    border-style: solid;
+}
+.Numbers::before {
+    left: 40.5%;
+    border-color: transparent var(--Main-Color) transparent transparent;
+}
+.Numbers::after {
+    left: 57%;
+    border-color: transparent transparent transparent var(--Main-Color);
+}
+@media (max-width: 767px) {
+    .Numbers::before {
+        left: 10%;
+    }
+    .Numbers::after {
+        left: 80%;
+    }
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+    .Numbers::before {
+        left: 30%;
+    }
+    .Numbers::after {
+        left: 65%;
+    }
+}
+@media (min-width: 992px) and (max-width: 1025px) {
+    .Numbers::after {
+        left: 60%;
+    }
+    .Numbers::before {
+        left: 37%;
+    }
+}
+.Numbers li {
+    margin-right: 10px;
+    width: 50px;
+    cursor: pointer;
+    height: 50px;
+    padding: 12px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ddd;
+    transition: 0.3s;
+}
+.Numbers li:hover {
+    background-color: rgba(34, 34, 34, 0.377);
+}
+/* End Numbers */

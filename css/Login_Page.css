@@ -1,0 +1,534 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root {
+    --White-color: #F6F5F5;
+    --Secund-color-big-Screen: #D3E0EA;
+    --Main-color-big-Screen: #1687A7;
+    --Darcker-Main-color-big-Screen: #276678;
+}
+body {
+    font-family: 'Acme', sans-serif;
+    background-image: url(../images/1065607.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+    body {
+        background-image: url(../images/moblie-photo.jpg);
+    }
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+    body {
+        background-image: url(../images/Ipad\ Wallpaper.jpg);
+    }
+}
+@media (min-width: 1026px) and (max-width: 1281px) {
+    body {
+        background-image: url(../images/wallpaperflare.com_wallpaper\ \(1\).jpg)
+    }
+}
+/* Small Screen  */
+@media (min-width: 768px) {
+    .signin {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .signin {
+        width: 970px;
+    }
+}
+.signin {
+    display: flex;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: absolute;
+    top: 50%;
+    align-items: flex-start;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media (min-width: 1200px) {
+    .siginin {
+        width: 1170px;
+    }
+}
+@media (max-width: 991px) {
+    .signin {
+        padding: 0px;
+    }
+}
+/* End Global Rules */
+/* Start Information */
+.information {
+    display: grid;
+    position: relative;
+    width: 100%;
+    grid-template-columns: 500px 250px;
+    margin-top: 60px;
+    padding: 20px;
+    padding-bottom: 200px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+@media (max-width: 1025px) {
+    .information {
+        display: none;
+    }
+}
+.information h2 {
+    grid-column: 3 span;
+    font-size: 35px;
+    font-weight: 800;
+    margin: 0;
+    color: #65a10c;
+}
+.information p {
+    color: #305a05;
+    font-size: 20px;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+.information img {
+    width: 430px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+@media (min-width: 1025px) and (max-width: 1281px) {
+    .information {
+        width: 370px;
+    }
+    .information p {
+        width: 350px;
+    }
+    .information img {
+        display: none;
+    }
+}
+/* End Information */
+/* Start Sign in and Log in */
+.contanier {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 800px;
+}
+.contanier input {
+    display: none;
+}
+.contanier input+.c {
+    display: none;
+}
+@media (max-width: 1025px) {
+    .contanier {
+        width: 600px;
+    }
+    .contanier input+.c {
+        display: block;
+        position: relative;
+        top: -246px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 10px 20px;
+        text-align: center;
+        right: 125px;
+        font-size: 20px;
+        margin-left: 15px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+    }
+    .contanier input:checked+.c {
+        background-color: rgba(255, 255, 255, 0.7);
+        color: black;
+    }
+    .contanier input:checked+.c.Signin~.accont {
+        display: block;
+    }
+    .contanier input:checked+.c.Signin~.page {
+        display: none;
+    }
+    .contanier input:checked+.c.Login~.accont {
+        display: none;
+    }
+    .contanier input:checked+.c.Login~.page {
+        display: block;
+    }
+}
+/* Start Sign Place */
+.accont {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: 74.5px repeat(3, 56px) 20px 56px;
+    width: 400px;
+    position: relative;
+    height: 500px;
+    box-shadow: 10px 10px 40px rgba(230, 230, 230, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+}
+@media (max-width: 1025px) {
+    .accont {
+        width: 450px;
+        height: 450px;
+        border-radius: 5px;
+        display: grid;
+        box-shadow: 0 0 0;
+        padding: 0;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        padding: 10px;
+    }
+}
+@media (max-width: 767px) {
+    .accont {
+        width: 300px !important;
+    }
+}
+.accont h2 {
+    width: fit-content;
+    height: 60px;
+    font-size: 50px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    word-spacing: 4px;
+    letter-spacing: 3px;
+    border-bottom: 2px solid black;
+}
+.accont div {
+    margin-left: 40px;
+}
+@media (max-width: 767px) {
+    .accont div {
+        margin-left: 10px;
+    }
+}
+@media (max-width: 1025px) {
+    .accont div {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
+.accont div input {
+    display: block;
+    width: 250px;
+    height: 35px;
+    outline: none;
+    border-width: 0;
+    border-radius: 13px;
+    margin: 5px 0 5px 10px;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+    .accont div input {
+        width: 265px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+}
+.accont .age-Number {
+    display: flex;
+    margin-left: -40px;
+    margin-top: 10px;
+}
+@media (max-width: 767px) {
+    .accont .age-Number {
+        flex-wrap: wrap;
+        margin: auto;
+    }
+}
+@media (max-width: 1025px) {
+    .accont .age-Number {
+        margin: 0 auto;
+    }
+}
+.accont div label {
+    position: relative;
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+    .accont div label {
+        font-size: 17px;
+    }
+}
+.accont .type {
+    display: flex;
+    flex-wrap: wrap;
+}
+.accont .type input {
+    display: initial;
+    margin: 0;
+    width: 30px;
+    height: 15px;
+}
+.accont .age input {
+    display: inline;
+    margin: 0;
+    margin-top: 5px;
+    width: 60px;
+    height: 30px;
+}
+.accont .signB {
+    border-width: 0;
+    width: 80px;
+    height: 35px;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    position: absolute;
+    border-radius: 0;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 10px;
+}
+@media (max-width: 767px) {
+    .accont .signB {
+        bottom: 10px;
+        right: 20px;
+    }
+}
+@media (max-width: 1025px) {
+    .accont .signB {
+        right: 15px;
+        bottom: 15px;
+    }
+}
+.accont .signB:hover {
+    color: white;
+    border-width: 0;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+/* End Sign Place */
+/* Start Login Place */
+.contanier .page {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 470px;
+    width: 400px;
+    position: relative;
+    border-top-left-radius: 30px;
+    box-shadow: -15px 30px 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+.contanier .page h2 {
+    width: fit-content;
+    color: white;
+    font-size: 50px;
+    border-bottom: 2px solid white;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding-bottom: 5px;
+}
+.contanier .page h2::first-letter {
+    font-size: 55px !important;
+}
+.contanier .page .login {
+    display: grid;
+    position: absolute;
+    grid-gap: 25px;
+    top: calc(30% + 20px);
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+.contanier .page .login input {
+    display: block;
+    outline: none;
+    border-width: 0;
+    color: #f0f0f0;
+    width: 250px;
+    height: 35px;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    margin: 5px 0 5px 10px;
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+    .contanier .page .login input {
+        width: 260px;
+        height: 40px;
+        font-size: 17px;
+    }
+}
+.contanier .page .login input::placeholder {
+    color: #dfdfdfc0;
+}
+.contanier .page .Buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 260px;
+    margin: 0;
+    margin-top: -15px;
+    margin-left: 12px;
+}
+.contanier .page .login div {
+    position: relative;
+}
+.contanier .page .login i {
+    color: #222;
+    display: inline;
+    position: absolute;
+    font-size: 14px;
+    right: 25px;
+    bottom: 15px;
+}
+.contanier .page .Buttons .loginB {
+    border-width: 0;
+    width: 80px;
+    height: 35px;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    color: white;
+    position: relative;
+    border-radius: 0;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 10px;
+}
+.contanier .Buttons .loginB:hover {
+    color: black;
+    border-width: 0;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.contanier .Buttons a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    height: fit-content;
+    border-bottom: 2px solid #222;
+    border-left: 2px solid #222;
+    transition: 0.3s;
+}
+.contanier .Buttons a:hover {
+    border-bottom-color: white;
+    border-left: 2px solid white;
+    transform: scale(1.11, 1.11);
+}
+.contanier .login+hr {
+    position: absolute;
+    bottom: 150px;
+    width: 55%;
+    left: 50%;
+    transform: translate(-50%);
+    border-color: white;
+}
+.contanier .login~h3 {
+    position: absolute;
+    color: white;
+    bottom: 135px;
+    font-weight: 200;
+    left: 50%;
+    width: 150px;
+    text-align: center;
+    border-bottom: 1px solid white;
+    margin: 0;
+    transform: translate(-50%);
+    font-size: 16px;
+}
+.contanier .links-by {
+    display: flex;
+    width: 400px;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 60px;
+    font-size: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@media (max-width: 767px) {
+    .contanier .links-by {
+        width: 300px;
+    }
+}
+.contanier .links-by a {
+    opacity: 0.5;
+    width: 40px;
+    height: 40px;
+    padding: 3px 5px 0px;
+    border-radius: 5px;
+    transition: 0.3s;
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+.contanier .links-by a:hover {
+    opacity: 1;
+}
+.contanier .links-by a:nth-child(1):hover {
+    color: #D24635;
+}
+.contanier .links-by a p {
+    text-align: center;
+    display:inline;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: absolute;
+    top: 20px;
+    left: -18px;
+}
+.contanier .links-by a:nth-child(1) p {
+    left: -12px;
+}
+.contanier .links-by a:hover p {
+    display: none;
+    font-size: 25px;
+    top: -20px;
+}
+.contanier .links-by a:nth-child(2):hover {
+    color: #1278F3;
+}
+.contanier .links-by a:nth-child(3):hover {
+    color: #1DA1F3;
+}
+@media (max-width: 767px) {
+    .contanier .page {
+        width: 300px !important;
+    }
+}
+@media (max-width: 1025px) {
+    .contanier .page {
+        position: absolute;
+        width: 450px;
+        left: 50%;
+        top: -203px;
+        border-radius: 5px;
+        transform: translate(-50%);
+    }
+}
+/* End Login Place */
+/* End Sign in and Log in */
+/* Start Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #22222277;
+    width: 100%;
+    padding: 7px;
+    text-align: center;
+    color: white;
+}
+footer p {
+    margin: 0;
+}
+/* End Footer */
