@@ -28,6 +28,52 @@
 .header .links .icon {
     display: none;
 }
+.header .links ul li a {
+    display: block;
+    text-decoration: none;
+    color: var(--Secund-color);
+    transition: 0.3s;
+    width: 90px;
+    text-align: center;
+    margin: 10px;
+}
+.header .links ul hr {
+    display: none;
+}
+.header .links ul img {
+    display: none;
+}
+.header .links ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+.header .links ul li a:hover {
+    color: var(--Secund-color-big-Screen);
+    padding-left: 25px;
+}
+.header .links .loginb {
+    text-decoration: none;
+    position: absolute;
+    top: 26px;
+    right: -60px;
+    color: #276678;
+}
+.header .links .loginb:hover {
+    color: #1687A7;
+}
+.header .links .loginb::before {
+    content: "";
+    position: absolute;
+    left: -60%;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 0;
+    height: 0;
+    border-top: 7.5px solid transparent;
+    border-left: 15px solid var(--Secund-color-big-Screen);
+    border-bottom: 7.5px solid transparent;
+}
 @media (max-width: 767px) {
     .header .links {
         position: relative;
@@ -61,18 +107,19 @@
         margin: 0px;
         background-color: var(--White-color);
         padding: 0;
+        overflow: hidden;
         min-width: 100vw;
         min-height: calc(100vh - 54px);
         right: -70px;
         top: calc(100% + 15px);
         position: absolute;
-        display: none !important;
+        display: none;
         list-style: none;
         box-shadow: 0px 15px 20px #d2d2d2;
         z-index: 1;
     }
     .header .links:hover ul {
-        display: grid !important;
+        display: grid;
         align-content: flex-start;
         opacity: 0;
         animation: backgroundColor 0.4s ease;
@@ -86,88 +133,50 @@
             opacity: 1;
         }
     }
-    .header .links ul li:last-child::after {
-        content: "";
-        width: 300px;
-        height: 340px;
-        background-image: url(../images/Kanki2.png);
-        opacity: 0.678;
-        position: absolute;
-        background-size: 350px 350px;
-        right: 2px;
-        bottom: -5px;
-        background-repeat: no-repeat;
-    }
     .header .links ul li {
         font-size: 30px;
         padding-left: 25px;
         color: #444444;
         height: 80px;
+        z-index: 3;
+    }
+    .header .links ul hr {
+        display: inline;
+        margin: 0;
+        border: 1.5px solid #ddd;
     }
     .header .links ul li a:hover {
-        color: #DA0037 !important;
+        color: #DA0037;
     }
-    .header .links ul li:not(:first-of-type) {
-        border-top: 2px solid #ddd;
+    .header .links ul .image {
+        display: initial;
+        width: 300px;
+        background-image: url(../images/a4xi7-v2yyr.svg);
+        z-index: 2;
+        height: 340px;
+        opacity: 0.678;
+        position: absolute;
+        background-size: 350px 350px;
+        right: -55px;
+        bottom: -30px;
+        background-repeat: no-repeat;
     }
     .header .links ul li a {
-        width: 150px !important;
-        margin-top: 20px !important;
+        width: fit-content;
+        z-index: 4;
+        margin-top: 20px;
     }
     .header .links .loginb {
-        right: -60px !important;
-        top: 0 !important;
+        right: -60px;
+        top: 0;
         width: 45px;
-        color: #DA0037 !important;
+        color: #DA0037;
     }
     .header .links .loginb:hover {
-        color: #444444 !important;
+        color: #444444;
     }
     .header .links .loginb::before {
         display: none;
     }
-}
-.header .links ul li a {
-    display: block;
-    text-decoration: none;
-    color: var(--Secund-color);
-    transition: 0.3s;
-    width: 90px;
-    text-align: center;
-    margin: 10px;
-}
-.header .links ul li:not(:last-child) {
-    border-right: 1px solid #ddd;
-}
-.header .links ul {
-    padding: 0;
-    list-style: none;
-    display: flex;
-}
-.header .links ul li a:hover {
-    color: var(--Secund-color-big-Screen);
-    padding-left: 25px;
-}
-.header .links .loginb {
-    text-decoration: none;
-    position: absolute;
-    top: 26px;
-    right: -60px;
-    color: #276678;
-}
-.header .links .loginb:hover {
-    color: #1687A7;
-}
-.header .links .loginb::before {
-    content: "";
-    position: absolute;
-    left: -60%;
-    top: 50%;
-    transform: translate(0, -50%);
-    width: 0;
-    height: 0;
-    border-top: 7.5px solid transparent;
-    border-left: 15px solid var(--Secund-color-big-Screen);
-    border-bottom: 7.5px solid transparent;
 }
 /* End Header */
