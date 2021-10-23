@@ -205,7 +205,7 @@ body {
     height: 45px;
     border-radius: 50%;
     outline: none;
-    background-image: url(../images/Search2.png);
+    background-image: url(../images/aod61-952dy.svg);
     background-size: 35px;
     background-position: center;
     background-repeat: no-repeat;
@@ -377,7 +377,7 @@ body {
 }
 .anime:nth-child(7):hover .image {
     background-image: url(../images/Tanjiro\ Wallpeper.jpg);
-    background-position: center -150px;
+    background-position: center;
 }
 .anime:nth-child(8) .image {
     background-image: url(../images/Weathering\ with\ You2.png);
